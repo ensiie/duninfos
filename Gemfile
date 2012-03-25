@@ -1,30 +1,34 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'haml'
-gem 'jquery-rails'
-gem 'paperclip'
-gem 'yaml_db'
-gem 'unicorn'
+group :assets do
+  gem "sass-rails", "~> 3.2.5"
+  gem 'coffee-rails', " ~> 3.2.2"
+  gem 'uglifier'
+  gem 'jquery_mobile_rails'
+end
 
+gem "jquery-rails", "~> 2.0.1"
+
+gem "haml", "~> 3.1.4"
+gem "paperclip", "~> 2.7.0"
+gem 'acts_as_list'
+gem 'heroku'
+gem "pg", "~> 0.13.2"
+
+# test stuff
 group :development, :test do
-  gem 'cucumber-rails'
-  gem 'capybara'
-  gem 'database_cleaner'
+  gem "cucumber-rails", "~> 1.3.0"
+  gem "database_cleaner", "~> 0.7.2"
 end
 
 group :production do
-  gem 'pg'
+  gem "unicorn", "~> 4.2.0"
 end
-
-gem 'acts_as_list'
-
-gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'
