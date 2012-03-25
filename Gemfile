@@ -24,6 +24,8 @@ end
 
 gem 'acts_as_list'
 
+gem 'heroku'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
